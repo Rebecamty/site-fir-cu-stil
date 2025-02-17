@@ -1,0 +1,283 @@
+/* Încarcă fontul TAN - PEARL */
+@font-face {
+    font-family: "TAN - PEARL";
+    src: url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.eot");
+    src: url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.eot?#iefix")format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.woff2")format("woff2"),
+         url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.woff")format("woff"),
+         url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.ttf")format("truetype"),
+         url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.svg#TAN - PEARL")format("svg");
+}
+/* Stiluri generale */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden; /* Ascunde scrollbar-ul */
+}
+
+/* Fiecare pagină ocupă întregul ecran */
+.page {
+    height: 100vh; /* Întreaga înălțime a ecranului */
+    width: 100vw; /* Întreaga lățime a ecranului */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Imaginea acoperă întregul ecran */
+    background-position: center; /* Centrează imaginea */
+    background-repeat: no-repeat; /* Previne repetarea imaginii */
+    position: absolute; /* Fiecare pagină este suprapusă */
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease; /* Tranziție pentru schimbarea paginilor */
+}
+
+/* Ascunde paginile inițial */
+.page:not(.active) {
+    opacity: 0;
+    pointer-events: none; /* Dezactivează interacțiunea cu paginile ascunse */
+}
+
+/* Pagina Principală (Home) */
+#home {
+    background-image: url('images/bk1.png'); /* Înlocuiește cu calea imaginii tale */
+}
+
+/* Titlul sub logo */
+.title {
+    font-family: "TAN - PEARL", cursive;  
+    font-size: 36px;
+    color: #efc3da; /* Roz deschis */
+    margin: 10px 0;
+}
+
+.model-title {
+    font-family: "TAN - PEARL", cursive;   /* Folosește un font diferit, de exemplu Georgia */
+    font-size: 36px; /* Mărime mai mică decât titlul principal */
+    color: #333; /* Culoare închisă pentru text */
+    margin: 20px 0; /* Spațiu mai mare deasupra și dedesubt */
+    text-transform: uppercase; /* Transformă textul în majuscule */
+    letter-spacing: 2px; /* Spațiere între litere */
+}
+
+
+
+/* Stiluri pentru containerul GIF */
+.gif-container {
+    position: relative;
+    margin-top: -100px; /* Spațiu deasupra GIF-ului */
+    margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
+    text-align: center; /* Centrează GIF-ul pe orizontală */
+    z-index: 1; /* Asigură că GIF-ul este sub butoane */
+}
+
+.gif-container img {
+    width: 500px; /* Dimensiune implicită pentru desktop */
+    height: auto; /* Păstrează proporțiile */
+}
+
+
+
+
+/* Pagini de modele */
+#modele1, #modele2, #modele3 {
+    background-image: url('images/bk2.png'); /* Înlocuiește cu calea imaginii tale */
+}
+
+/* Logo */
+.logo {
+    max-width: 300px;
+    margin: 0px auto;
+    display: block;
+}
+
+/* Butoane de social media */
+.social-links {
+    position: relative; /* Poziționare relativă pentru a putea controla mai ușor locul lor */
+    margin-top: 20px; /* Poți ajusta această valoare pentru a le muta mai sus sau mai jos */
+    margin-bottom: 20px; /* Poți ajusta această valoare pentru a le muta mai sus sau mai jos */
+    z-index: 10;  /* Butoanele vor fi deasupra GIF-ului */
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff69b4; /* Roz */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #ff1493; /* Roz mai închis */
+}
+
+/* Stiluri pentru galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite imaginilor să treacă pe rândul următor */
+    justify-content: center; /* Centrează imaginile pe orizontală */
+    gap: 10px; /* Spațiu între imagini */
+    margin: 20px 0;
+}
+
+.gallery .model-image {
+    max-width: 200px; /* Dimensiunea maximă a imaginilor */
+    height: auto; /* Păstrează proporțiile imaginilor */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    transition: transform 0.3s ease; /* Animatie la hover */
+    line-height: 1.5;
+    padding: 20px; /* Spațiu în interiorul fundalului */
+    background-color: rgba(255, 249, 254, 0.8); /* Fundal semi-transparent */
+    border-radius: 15px; /* Colțuri rotunjite */
+    box-shadow: 0 5px 8px rgba(44, 8, 48, 0.1); /* Umbră subtilă */
+}
+
+.gallery .model-image:hover {
+    transform: scale(1.05); /* Mărește ușor imaginea la hover */
+}
+/* Butonul "Modele" */
+.modele-button {
+    margin: 20px 0;
+    margin-bottom: 120px; /* Poți ajusta această valoare pentru a-l muta mai sus sau mai jos */
+}
+
+.modele-button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff69b4; /* Roz */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.modele-button a:hover {
+    background-color: #ff1493; /* Roz mai închis */
+}
+
+
+
+/* Butoane de navigare */
+.navigation {
+    margin: 20px 0;
+}
+
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff69b4; /* Roz */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #ff1493; /* Roz mai închis */
+}
+
+
+
+/* Stiluri pentru telefoane (ecrane mici) */
+@media (max-width: 768px) {
+    /* Titlul paginii principale */
+    .title {
+        font-size: 36px; /* Mărime mai mică pe telefoane */
+        margin: 10px 0; /* Spațiu mai mic deasupra */
+    }
+    .gallery .model-image {
+        max-width: 24%; /* Imagini ocupă întreaga lățime a ecranului */
+    } /* Add this closing bracket */
+
+    /* Container pentru GIF */
+    .gif-container {
+        position: relative;
+        margin-top: -100px; /* Spațiu deasupra GIF-ului */
+        margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
+        text-align: center; /* Centrează GIF-ul pe orizontală */
+        z-index: 1; /* Asigură că GIF-ul este sub butoane */
+    }
+    
+
+    /* Dimensiunea GIF-ului pe telefoane */
+    .gif-container img {
+        max-width: 120%; /* GIF-ul este mai mic pe telefoane */
+        height: auto; /* Păstrează proporțiile */
+    }*/
+}
+
+    /* Textul descriptiv */
+    .description {
+        font-size: 16px; /* Text mai mic pe telefoane */
+        padding: 10px; /* Spațiu mai mic în interiorul fundalului */
+    }
+
+    /* Butoane de social media */
+    .social-links a {
+        padding: 8px 16px; /* Butoane mai mici pe telefoane */
+        font-size: 14px; /* Text mai mic pe butoane */
+        margin-bottom: -5px; /* Spațiu mai mic deasupra */
+    }
+
+    /* Butonul "Modele" */
+    .modele-button a {
+        padding: 8px 16px; /* Buton mai mic pe telefoane */
+        font-size: 14px; /* Text mai mic pe buton */
+    }
+
+
+/* Stiluri pentru ecrane foarte mici (ex. telefoane mici) */
+@media (max-width: 480px) {
+    /* Titlul paginii principale */
+    .title {
+        font-size: 24px; /* Mărime și mai mică pe telefoane mici */
+    }
+    
+    
+     /* Container pentru GIF */
+     .gif-container {
+        position: relative;
+        margin-top: -100px; /* Spațiu deasupra GIF-ului */
+        margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
+        text-align: center; /* Centrează GIF-ul pe orizontală */
+        z-index: 1; /* Asigură că GIF-ul este sub butoane */
+    }
+      /* Dimensiunea GIF-ului pe telefoane */
+      .gif-container img {
+        max-width: 100%; /* GIF-ul este mai mic pe telefoane */
+        height: auto; /* Păstrează proporțiile */
+    }*/
+}
+    .gallery .model-image {
+        max-width: 20%; /* Imagini ocupă întreaga lățime a ecranului */
+    }
+
+    
+
+    /* Textul descriptiv */
+    .description {
+        font-size: 14px; /* Text și mai mic pe telefoane mici */
+        padding: 20px; /* Spațiu și mai mic în interiorul fundalului */
+    }
+
+    /* Butoane de social media */
+    .social-links a {
+        padding: 6px 12px; /* Butoane și mai mici pe telefoane mici */
+        font-size: 12px; /* Text și mai mic pe butoane */
+        margin-bottom: -3px; /* Spațiu mai mic deasupra */
+    }
+
+    /* Butonul "Modele" */
+    .modele-button a {
+        padding: 6px 12px; /* Buton și mai mic pe telefoane mici */
+        font-size: 12px; /* Text și mai mic pe buton */
+    }
+}
