@@ -21,67 +21,68 @@ html, body {
 
 /* Fiecare pagină ocupă întregul ecran */
 .page {
-    height: 100vh; /* Întreaga înălțime a ecranului */
-    width: 100vw; /* Întreaga lățime a ecranului */
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover; /* Imaginea acoperă întregul ecran */
-    background-position: center; /* Centrează imaginea */
-    background-repeat: no-repeat; /* Previne repetarea imaginii */
-    position: absolute; /* Fiecare pagină este suprapusă */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.5s ease; /* Tranziție pentru schimbarea paginilor */
+    transition: opacity 0.5s ease;
 }
 
 /* Ascunde paginile inițial */
 .page:not(.active) {
     opacity: 0;
-    pointer-events: none; /* Dezactivează interacțiunea cu paginile ascunse */
+    pointer-events: none;
 }
 
-/* Pagina Principală (Home) */
+/* Pagina Principală */
 #home {
-    background-image: url('images/bk1.png'); /* Înlocuiește cu calea imaginii tale */
+    background-image: url('images/bk1.png');
 }
 
 /* Titlul sub logo */
 .title {
     font-family: "TAN - PEARL", cursive;  
     font-size: 36px;
-    color: #efc3da; /* Roz deschis */
+    color: #efc3da;
     margin: 10px 0;
 }
 
 .model-title {
-    font-family: "TAN - PEARL", cursive;   /* Folosește un font diferit, de exemplu Georgia */
-    font-size: 36px; /* Mărime mai mică decât titlul principal */
-    color: #333; /* Culoare închisă pentru text */
-    margin: 20px 0; /* Spațiu mai mare deasupra și dedesubt */
-    text-transform: uppercase; /* Transformă textul în majuscule */
-    letter-spacing: 2px; /* Spațiere între litere */
+    font-family: "TAN - PEARL", cursive;  
+    font-size: 36px;
+    color: #333;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Stiluri pentru containerul GIF */
 .gif-container {
     position: relative;
-    margin-top: -100px; /* Spațiu deasupra GIF-ului */
-    margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
-    text-align: center; /* Centrează GIF-ul pe orizontală */
-    z-index: 1; /* Asigură că GIF-ul este sub butoane */
+    margin-top: -100px;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 1;
 }
 
 .gif-container img {
-    width: 500px; /* Dimensiune implicită pentru desktop */
-    height: auto; /* Păstrează proporțiile */
+    width: 500px;
+    height: auto;
 }
 
 /* Pagini de modele */
-
-#modele1, #modele2, #modele3, #modele4, #modele5, #modele6, #modele7, #modele8, #modele9, #modele10, #modele11, #modele12, #modele13, #modele14, #modele15 {
-    background-image: url('images/bk2.png'); /* Înlocuiește cu calea imaginii tale */
+#modele1, #modele2, #modele3, #modele4, #modele5, #modele6, #modele7, 
+#modele8, #modele9, #modele10, #modele11, #modele12, #modele13, 
+#modele14, #modele15 {
+    background-image: url('images/bk2.png');
 }
 
 /* Logo */
@@ -93,17 +94,17 @@ html, body {
 
 /* Butoane de social media */
 .social-links {
-    position: relative; /* Poziționare relativă pentru a putea controla mai ușor locul lor */
-    margin-top: 20px; /* Poți ajusta această valoare pentru a le muta mai sus sau mai jos */
-    margin-bottom: 20px; /* Poți ajusta această valoare pentru a le muta mai sus sau mai jos */
-    z-index: 10;  /* Butoanele vor fi deasupra GIF-ului */
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
 }
 
 .social-links a {
     margin: 0 10px;
     text-decoration: none;
     color: #fff;
-    background-color: #ff69b4; /* Roz */
+    background-color: #ff69b4;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -111,19 +112,19 @@ html, body {
 }
 
 .social-links a:hover {
-    background-color: #ff1493; /* Roz mai închis */
+    background-color: #ff1493;
 }
 
 /* Butonul "Modele" */
 .modele-button {
     margin: 20px 0;
-    margin-bottom: 120px; /* Poți ajusta această valoare pentru a-l muta mai sus sau mai jos */
+    margin-bottom: 120px;
 }
 
 .modele-button a {
     text-decoration: none;
     color: #fff;
-    background-color: #ff69b4; /* Roz */
+    background-color: #ff69b4;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -131,32 +132,35 @@ html, body {
 }
 
 .modele-button a:hover {
-    background-color: #ff1493; /* Roz mai închis */
+    background-color: #ff1493;
 }
 
 /* Butoane de navigare */
 .navigation {
-    position: absolute;
-    bottom: 15px;
+    position: fixed;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 0px;
+    gap: 5px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .navigation a {
-    margin: 0 10px;
     text-decoration: none;
-    color: #fff;
-    background-color: #ff69b4; /* Roz */
-    padding: 10px 20px;
+    color: white;
+    background-color: #ff69b4;
+    padding: 10px 15px;
     border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
 .navigation a:hover {
-    background-color: #ff1493; /* Roz mai închis */
+    background-color: #ff1493;
 }
 
 /* Stiluri pentru galerie */
@@ -166,98 +170,95 @@ html, body {
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    padding: 0 10px; /* Adaugă padding pentru a evita marginile strânse */
+    padding: 0 10px;
 }
 
 .gallery .model-image {
-    max-width: 100%; /* Imagini ocupă întreaga lățime a containerului */
-    height: auto; /* Păstrează proporțiile */
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .gallery .model-image:hover {
-    transform: scale(1.05); /* Efect de hover */
+    transform: scale(1.05);
 }
 
-/* Stiluri pentru telefoane (ecrane mici) */
+/* Stiluri pentru telefoane */
 @media (max-width: 768px) {
-    /* Titlul paginii principale */
     .title {
-        font-size: 24px; /* Titlu mai mic pe telefoane */
+        font-size: 24px;
         margin: 10px 0;
     }
 
-    /* Ajustări pentru imaginile din galerie */
     .gallery .model-image {
-        max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
-        margin: 0px 0; /* Spațiu între imagini */
+        max-width: 100%;
+        margin: 0px 0;
     }
 
-    /* Ajustări pentru containerul GIF */
     .gif-container img {
-        max-width: 100%; /* GIF-ul ocupă întreaga lățime a ecranului */
+        max-width: 100%;
         height: auto;
     }
 
-    /* Ajustări pentru butoanele de social media */
     .social-links a {
-        padding: 8px 16px; /* Butoane mai mici pe telefoane */
+        padding: 8px 16px;
         font-size: 14px;
     }
 
-    /* Ajustări pentru butonul "Modele" */
     .modele-button a {
-        padding: 8px 16px; /* Buton mai mic pe telefoane */
+        padding: 8px 16px;
         font-size: 14px;
     }
+
     .navigation {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 0px;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .navigation a {
+        flex: 1;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
     }
 }
 
-/* Stiluri pentru ecrane foarte mici (ex. telefoane mici) */
+/* Stiluri pentru ecrane foarte mici */
 @media (max-width: 480px) {
-    /* Titlul paginii principale */
     .title {
-        font-size: 20px; /* Titlu și mai mic pe telefoane mici */
+        font-size: 20px;
     }
 
-    /* Ajustări pentru imaginile din galerie */
     .gallery .model-image {
-        max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
-        margin: 0px 0; /* Spațiu mai mic între imagini */
+        max-width: 100%;
+        margin: 0px 0;
     }
 
-    /* Ajustări pentru containerul GIF */
     .gif-container img {
-        max-width: 100%; /* GIF-ul ocupă întreaga lățime a ecranului */
+        max-width: 100%;
         height: auto;
     }
 
-    /* Ajustări pentru butoanele de social media */
     .social-links a {
-        padding: 6px 12px; /* Butoane și mai mici pe telefoane mici */
+        padding: 6px 12px;
         font-size: 12px;
     }
 
-    /* Ajustări pentru butonul "Modele" */
     .modele-button a {
-        padding: 6px 12px; /* Buton și mai mic pe telefoane mici */
+        padding: 6px 12px;
         font-size: 12px;
     }
+
     .navigation {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 0px;
+        width: 95%;
+        padding: 8px;
+    }
+
+    .navigation a {
+        flex: 1;
+        padding: 10px;
+        font-size: 12px;
     }
 }
