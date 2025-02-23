@@ -12,8 +12,10 @@
         }
         iframe {
             width: 100%;
-            height: 100vh;
+            height: 100vh; /* Înălțimea întregului ecran */
             border: none;
+            overflow: auto; /* Activează scroll-ul */
+            -webkit-overflow-scrolling: touch; /* Scroll smooth pe dispozitive mobile */
         }
     </style>
 </head>
