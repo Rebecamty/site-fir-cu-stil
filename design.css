@@ -83,7 +83,7 @@ html, body {
 
 
 /* Pagini de modele */
-#modele1, #modele2, #modele3 {
+#modele1, #modele2, #modele3, #modele4, #modele5, #modele6, #modele7, #modele8, #modele9, #modele10, #modele11, #modele12, #modele13, #modele14, #modele15 {
     background-image: url('images/bk2.png'); /* Înlocuiește cu calea imaginii tale */
 }
 
@@ -117,31 +117,8 @@ html, body {
     background-color: #ff1493; /* Roz mai închis */
 }
 
-/* Stiluri pentru galerie */
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite imaginilor să treacă pe rândul următor */
-    justify-content: center; /* Centrează imaginile pe orizontală */
-    gap: 10px; /* Spațiu între imagini */
-    margin: 20px 0;
-}
 
-.gallery .model-image {
-    max-width: 200px; /* Dimensiunea maximă a imaginilor */
-    height: auto; /* Păstrează proporțiile imaginilor */
-    border-radius: 10px; /* Colțuri rotunjite */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
-    transition: transform 0.3s ease; /* Animatie la hover */
-    line-height: 1.5;
-    padding: 20px; /* Spațiu în interiorul fundalului */
-    background-color: rgba(255, 249, 254, 0.8); /* Fundal semi-transparent */
-    border-radius: 15px; /* Colțuri rotunjite */
-    box-shadow: 0 5px 8px rgba(44, 8, 48, 0.1); /* Umbră subtilă */
-}
 
-.gallery .model-image:hover {
-    transform: scale(1.05); /* Mărește ușor imaginea la hover */
-}
 /* Butonul "Modele" */
 .modele-button {
     margin: 20px 0;
@@ -193,9 +170,7 @@ html, body {
         font-size: 36px; /* Mărime mai mică pe telefoane */
         margin: 10px 0; /* Spațiu mai mic deasupra */
     }
-    .gallery .model-image {
-        max-width: 24%; /* Imagini ocupă întreaga lățime a ecranului */
-    } /* Add this closing bracket */
+   
 
     /* Container pentru GIF */
     .gif-container {
@@ -256,9 +231,7 @@ html, body {
         height: auto; /* Păstrează proporțiile */
     }
 
-    .gallery .model-image {
-        max-width: 20%; /* Imagini ocupă întreaga lățime a ecranului */
-    }
+    
 
     
 
