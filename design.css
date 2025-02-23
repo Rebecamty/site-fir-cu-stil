@@ -211,8 +211,8 @@ html, body {
     .gif-container img {
         max-width: 120%; /* GIF-ul este mai mic pe telefoane */
         height: auto; /* Păstrează proporțiile */
-    }*/
-}
+    }
+
 
     /* Textul descriptiv */
     .description {
@@ -254,8 +254,8 @@ html, body {
       .gif-container img {
         max-width: 100%; /* GIF-ul este mai mic pe telefoane */
         height: auto; /* Păstrează proporțiile */
-    }*/
-}
+    }
+
     .gallery .model-image {
         max-width: 20%; /* Imagini ocupă întreaga lățime a ecranului */
     }
