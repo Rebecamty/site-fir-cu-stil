@@ -10,11 +10,12 @@
         .hehe {
             padding: 20px;
             overflow: auto;
+            -webkit-overflow-scrolling: touch; /* Activează scroll-ul smooth pe iOS */
         }
 
         iframe {
             width: 100%;
-            height: 100vh; /* Înălțimea ecranului */
+            height: 100vh;
             border: none;
         }
     </style>
@@ -31,37 +32,11 @@
             <a href="https://www.tiktok.com/@oopsie_daisy00?" target="_blank">TikTok</a>
         </div>
         <div class="modele-button">
-            <a href="#" onclick="showPage('modele1')">Modele</a>
+            <a href="modele.html">Modele</a> <!-- Butonul care duce la pagina cu PDF -->
         </div>
         <div class="gif-container">
             <img src="images/Dream-19-unscreen www.gif" alt="GIF animat" class="gif">
         </div>
     </div>
-
-    <!-- Pagini de modele -->
-    <div class="hehe">
-        <iframe src="images/Portfolio Presentation.pdf#toolbar=0&view=fitH" width="100%" height="600px"></iframe>
-    </div>
-
-    <script>
-        // Funcție pentru a afișa o pagină și a ascunde celelalte
-        function showPage(pageId) {
-            // Ascunde toate paginile
-            document.querySelectorAll('.page').forEach(function(page) {
-                page.classList.remove('active');
-                page.style.opacity = 0;
-                page.style.pointerEvents = 'none';
-            });
-
-            // Afișează pagina dorită
-            const activePage = document.getElementById(pageId);
-            activePage.classList.add('active');
-            activePage.style.opacity = 1;
-            activePage.style.pointerEvents = 'auto';
-        }
-
-        // Afișează pagina "home" la încărcarea inițială
-        showPage('home');
-    </script>
 </body>
 </html>
