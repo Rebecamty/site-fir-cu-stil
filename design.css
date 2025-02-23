@@ -8,6 +8,7 @@
          url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.ttf")format("truetype"),
          url("https://db.onlinewebfonts.com/t/bb99de1682ee75602d351c1dde11a054.svg#TAN - PEARL")format("svg");
 }
+
 /* Stiluri generale */
 html, body {
     height: 100%;
@@ -63,8 +64,6 @@ html, body {
     letter-spacing: 2px; /* Spațiere între litere */
 }
 
-
-
 /* Stiluri pentru containerul GIF */
 .gif-container {
     position: relative;
@@ -78,9 +77,6 @@ html, body {
     width: 500px; /* Dimensiune implicită pentru desktop */
     height: auto; /* Păstrează proporțiile */
 }
-
-
-
 
 /* Pagini de modele */
 #modele1, #modele2, #modele3, #modele4, #modele5, #modele6, #modele7, #modele8, #modele9, #modele10, #modele11, #modele12, #modele13, #modele14, #modele15 {
@@ -117,8 +113,6 @@ html, body {
     background-color: #ff1493; /* Roz mai închis */
 }
 
-
-
 /* Butonul "Modele" */
 .modele-button {
     margin: 20px 0;
@@ -139,11 +133,14 @@ html, body {
     background-color: #ff1493; /* Roz mai închis */
 }
 
-
-
 /* Butoane de navigare */
 .navigation {
-    margin: 20px 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
 .navigation a {
@@ -161,96 +158,89 @@ html, body {
     background-color: #ff1493; /* Roz mai închis */
 }
 
+/* Stiluri pentru galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 0 10px; /* Adaugă padding pentru a evita marginile strânse */
+}
 
+.gallery .model-image {
+    max-width: 100%; /* Imagini ocupă întreaga lățime a containerului */
+    height: auto; /* Păstrează proporțiile */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery .model-image:hover {
+    transform: scale(1.05); /* Efect de hover */
+}
 
 /* Stiluri pentru telefoane (ecrane mici) */
 @media (max-width: 768px) {
     /* Titlul paginii principale */
     .title {
-        font-size: 36px; /* Mărime mai mică pe telefoane */
-        margin: 10px 0; /* Spațiu mai mic deasupra */
+        font-size: 24px; /* Titlu mai mic pe telefoane */
+        margin: 10px 0;
     }
-   
 
-    /* Container pentru GIF */
-    .gif-container {
-        position: relative;
-        margin-top: -100px; /* Spațiu deasupra GIF-ului */
-        margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
-        text-align: center; /* Centrează GIF-ul pe orizontală */
-        z-index: 1; /* Asigură că GIF-ul este sub butoane */
+    /* Ajustări pentru imaginile din galerie */
+    .gallery .model-image {
+        max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
+        margin: 10px 0; /* Spațiu între imagini */
     }
-    
 
-    /* Dimensiunea GIF-ului pe telefoane */
+    /* Ajustări pentru containerul GIF */
     .gif-container img {
-        max-width: 120%; /* GIF-ul este mai mic pe telefoane */
-        height: auto; /* Păstrează proporțiile */
+        max-width: 100%; /* GIF-ul ocupă întreaga lățime a ecranului */
+        height: auto;
     }
 
-
-    /* Textul descriptiv */
-    .description {
-        font-size: 16px; /* Text mai mic pe telefoane */
-        padding: 10px; /* Spațiu mai mic în interiorul fundalului */
-    }
-
-    /* Butoane de social media */
+    /* Ajustări pentru butoanele de social media */
     .social-links a {
         padding: 8px 16px; /* Butoane mai mici pe telefoane */
-        font-size: 14px; /* Text mai mic pe butoane */
-        margin-bottom: -5px; /* Spațiu mai mic deasupra */
+        font-size: 14px;
     }
 
-    /* Butonul "Modele" */
+    /* Ajustări pentru butonul "Modele" */
     .modele-button a {
         padding: 8px 16px; /* Buton mai mic pe telefoane */
-        font-size: 14px; /* Text mai mic pe buton */
+        font-size: 14px;
     }
-
+}
 
 /* Stiluri pentru ecrane foarte mici (ex. telefoane mici) */
 @media (max-width: 480px) {
     /* Titlul paginii principale */
     .title {
-        font-size: 24px; /* Mărime și mai mică pe telefoane mici */
-    }
-    
-    
-     /* Container pentru GIF */
-     .gif-container {
-        position: relative;
-        margin-top: -100px; /* Spațiu deasupra GIF-ului */
-        margin-bottom: 20px; /* Spațiu dedesubtul GIF-ului */
-        text-align: center; /* Centrează GIF-ul pe orizontală */
-        z-index: 1; /* Asigură că GIF-ul este sub butoane */
-    }
-      /* Dimensiunea GIF-ului pe telefoane */
-      .gif-container img {
-        max-width: 100%; /* GIF-ul este mai mic pe telefoane */
-        height: auto; /* Păstrează proporțiile */
+        font-size: 20px; /* Titlu și mai mic pe telefoane mici */
     }
 
-    
-
-    
-
-    /* Textul descriptiv */
-    .description {
-        font-size: 14px; /* Text și mai mic pe telefoane mici */
-        padding: 20px; /* Spațiu și mai mic în interiorul fundalului */
+    /* Ajustări pentru imaginile din galerie */
+    .gallery .model-image {
+        max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
+        margin: 5px 0; /* Spațiu mai mic între imagini */
     }
 
-    /* Butoane de social media */
+    /* Ajustări pentru containerul GIF */
+    .gif-container img {
+        max-width: 100%; /* GIF-ul ocupă întreaga lățime a ecranului */
+        height: auto;
+    }
+
+    /* Ajustări pentru butoanele de social media */
     .social-links a {
         padding: 6px 12px; /* Butoane și mai mici pe telefoane mici */
-        font-size: 12px; /* Text și mai mic pe butoane */
-        margin-bottom: -3px; /* Spațiu mai mic deasupra */
+        font-size: 12px;
     }
 
-    /* Butonul "Modele" */
+    /* Ajustări pentru butonul "Modele" */
     .modele-button a {
         padding: 6px 12px; /* Buton și mai mic pe telefoane mici */
-        font-size: 12px; /* Text și mai mic pe buton */
+        font-size: 12px;
     }
 }
