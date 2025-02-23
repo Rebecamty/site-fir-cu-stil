@@ -212,6 +212,14 @@ html, body {
         padding: 8px 16px; /* Buton mai mic pe telefoane */
         font-size: 14px;
     }
+    .navigation {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0px;
+    }
 }
 
 /* Stiluri pentru ecrane foarte mici (ex. telefoane mici) */
@@ -243,5 +251,13 @@ html, body {
     .modele-button a {
         padding: 6px 12px; /* Buton și mai mic pe telefoane mici */
         font-size: 12px;
+    }
+    .navigation {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0px;
     }
 }
