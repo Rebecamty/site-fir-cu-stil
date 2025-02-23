@@ -79,6 +79,7 @@ html, body {
 }
 
 /* Pagini de modele */
+
 #modele1, #modele2, #modele3, #modele4, #modele5, #modele6, #modele7, #modele8, #modele9, #modele10, #modele11, #modele12, #modele13, #modele14, #modele15 {
     background-image: url('images/bk2.png'); /* Înlocuiește cu calea imaginii tale */
 }
@@ -140,7 +141,7 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 2px;
 }
 
 .navigation a {
@@ -191,7 +192,7 @@ html, body {
     /* Ajustări pentru imaginile din galerie */
     .gallery .model-image {
         max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
-        margin: 10px 0; /* Spațiu între imagini */
+        margin: 0px 0; /* Spațiu între imagini */
     }
 
     /* Ajustări pentru containerul GIF */
@@ -223,7 +224,7 @@ html, body {
     /* Ajustări pentru imaginile din galerie */
     .gallery .model-image {
         max-width: 100%; /* Imagini ocupă întreaga lățime a ecranului */
-        margin: 5px 0; /* Spațiu mai mic între imagini */
+        margin: 0px 0; /* Spațiu mai mic între imagini */
     }
 
     /* Ajustări pentru containerul GIF */
